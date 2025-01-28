@@ -5,9 +5,16 @@ import (
 	"inv/config"
 	"inv/internal/app"
 	"log"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	// Load .env file
+	if err := godotenv.Load(); err != nil {
+		log.Println("Warning: .env file not found")
+	}
+
 	// Load configuration
 	cfg, err := config.Load()
 	if err != nil {

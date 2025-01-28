@@ -1,5 +1,6 @@
 package middleware
 
+/*
 import (
 	"strings"
 
@@ -21,3 +22,4 @@ func TenantResolver() gin.HandlerFunc {
 		c.Next()
 	}
 }
+*/

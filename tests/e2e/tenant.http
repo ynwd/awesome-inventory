@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:8080
-@tenantId = 01JJNE2HMQPN1NWJ14K9WMG4VJ
+@tenantId = 01JJPJ29QXTP20JMNGWGW6E0QH
 @ownerId = 01JJNJWGJ9KA9T04PCKESG5MT9
 
 ### Create Tenant Owner

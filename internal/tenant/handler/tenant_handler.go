@@ -65,7 +65,7 @@ func (h *TenantHandler) DeleteTenant(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"message": "tenant deleted successfully"})
+	c.JSON(http.StatusNoContent, gin.H{"message": "tenant deleted successfully"})
 }
 
 func (h *TenantHandler) GetTenant(c *gin.Context) {

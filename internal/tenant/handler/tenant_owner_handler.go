@@ -63,7 +63,7 @@ func (h *TenantOwnerHandler) DeleteOwner(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"message": "owner deleted successfully"})
+	c.JSON(http.StatusNoContent, gin.H{"message": "owner deleted successfully"})
 }
 
 func (h *TenantOwnerHandler) GetOwner(c *gin.Context) {

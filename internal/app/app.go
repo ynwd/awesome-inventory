@@ -82,6 +82,14 @@ func (a *App) Run(addr string) error {
 	return a.router.Run(addr)
 }
 
+func (a *App) Router() *gin.Engine {
+	return a.router
+}
+
+func (a *App) GetDB() *gorm.DB {
+	return a.db
+}
+
 func (a *App) Shutdown() error {
 	sqlDB, err := a.db.DB()
 	if err != nil {
