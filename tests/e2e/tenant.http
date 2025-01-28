@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:8080
+@tenantId = 01JJNE2HMQPN1NWJ14K9WMG4VJ
+@ownerId = 01JJNJWGJ9KA9T04PCKESG5MT9
+
+### Create Tenant Owner
+POST {{baseUrl}}/api/tenants/owners
+Content-Type: application/json
+
+{
+    "email": "john@example.com",
+    "name": "John Doe",
+    "password": "secret123"
+}
+
+### Update Tenant Owner
+PUT {{baseUrl}}/api/tenants/owners/{{ownerId}}
+Content-Type: application/json
+
+{
+    "name": "John Smith",
+    "email": "john.smith@example.com",
+    "password": "newsecret123"
+}
+
+### Delete Tenant Owner
+DELETE {{baseUrl}}/api/tenants/owners/{{ownerId}}
+
+### Get Tenant Owner
+GET {{baseUrl}}/api/tenants/owners/{{ownerId}}
+
+### Create Tenant
+POST {{baseUrl}}/api/tenants
+Content-Type: application/json
+
+{
+    "tenant_owner_id": "{{ownerId}}"
+}
+
+### Update Tenant
+PUT {{baseUrl}}/api/tenants/01JJNMW68QHNRS0STX8XMAH6BG
+Content-Type: application/json
+
+{
+    "tenant_owner_id": "{{ownerId}}",
+    "status": "INACTIVE"
+}
+
+### Delete Tenant
+DELETE {{baseUrl}}/api/tenants/{{tenantId}}
+
+### Get Single Tenant
+GET {{baseUrl}}/api/tenants/{{tenantId}}
+
+### List All Tenants
+GET {{baseUrl}}/api/tenants
